@@ -1,0 +1,6 @@
+.btn {
+  @apply bg-sky-600 text-white px-4 text-2xl font-bold;
+  &.rounded {
+    @apply w-[3rem] h-[3rem] rounded-full;
+  }
+}

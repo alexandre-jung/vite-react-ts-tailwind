@@ -1,0 +1,39 @@
+@use 'vendor/normalize';
+@use 'variables' as *;
+@use 'layout';
+@use 'components';
+@use 'utils';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  // font-family: Blaka, cursive;
+  color: white;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: top;
+  width: $icon-size;
+  height: $icon-size;
+  // color: $icon-color;
+}
+
+.sr-only-focusable {
+  @apply sr-only;
+  &:focus {
+    @apply not-sr-only;
+  }
+}
+
+.link {
+  color: gray;
+  &.active {
+    color: purple;
+  }
+}
