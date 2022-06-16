@@ -13,7 +13,6 @@
 ::after {
   box-sizing: border-box;
   // font-family: Blaka, cursive;
-  color: white;
 }
 
 .icon {
@@ -21,7 +20,7 @@
   vertical-align: top;
   width: $icon-size;
   height: $icon-size;
-  // color: $icon-color;
+  color: $icon-color;
 }
 
 .sr-only-focusable {
