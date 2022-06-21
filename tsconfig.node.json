@@ -5,9 +5,5 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true
   },
-  "include": [
-    "vite.config.ts",
-    "config/alias.ts",
-    "config/svgr.ts",
-  ],
+  "include": ["**/*.ts"],
 }
