@@ -23,6 +23,12 @@ const configuration = ({ mode }) => ({
   },
   publicDir: 'src/public',
   base: mode == 'production' ? '/vite-react-ts-tailwind/' : '/',
+
+  // Vitest configuration.
+  // test: {
+  //   globals: true,
+  //   environment: 'jsdom',
+  // },
 });
 
 // https://vitejs.dev/config/

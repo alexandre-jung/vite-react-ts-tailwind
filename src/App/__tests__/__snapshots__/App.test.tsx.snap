@@ -8,7 +8,9 @@ exports[`App unit test should render 1`] = `
     <svg
       class="text-sky-600 rotate m-8"
       height="512"
+      viewBox="0 0 512 512"
       width="512"
+      xmlns="http://www.w3.org/2000/svg"
     >
       react-logo.svg
     </svg>

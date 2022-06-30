@@ -12,16 +12,14 @@ module.exports = {
   //     isolatedModules: true,
   //   },
   // },
-  setupFilesAfterEnv: [
-    '<rootDir>/jest/setupTests.js',
-  ],
+  setupFilesAfterEnv: ['<rootDir>/jest/setupTests.js'],
   transform: {
     // Here we can use either babel-jest or ts-jest for jsx files.
     // Use ts-jest to type-check the code during tests.
     '^.+\\.jsx?$': 'babel-jest',
     '^.+\\.tsx?$': 'ts-jest',
-    '^.+\\.svg$': '<rootDir>/jest/transforms/fileTransform.js',
-    '^.+\\.module.scss$': '<rootDir>/jest/transforms/scssTransform.js',
+    '^.+\\.svg$': '<rootDir>/jest/transforms/svgTransform.js',
+    '^.+\\.module.s?css$': '<rootDir>/jest/transforms/scssTransform.js',
   },
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
   moduleNameMapper: {

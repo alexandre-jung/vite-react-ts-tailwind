@@ -80,5 +80,8 @@
   },
   "msw": {
     "workerDirectory": "src/public"
+  },
+  "dependencies": {
+    "vitest": "^0.16.0"
   }
 }
