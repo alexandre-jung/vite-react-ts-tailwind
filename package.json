@@ -37,7 +37,7 @@
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-interactions": "^6.5.9",
     "@storybook/addon-links": "^6.5.9",
-    "@storybook/builder-vite": "^0.1.36",
+    "@storybook/builder-vite": "^0.1.39",
     "@storybook/react": "^6.5.9",
     "@storybook/testing-library": "^0.0.13",
     "@testing-library/jest-dom": "^5.16.4",
@@ -53,7 +53,7 @@
     "babel-loader": "^8.2.5",
     "camelcase": "^6.3.0",
     "core-js": "^3.23.2",
-    "cypress": "^10.2.0",
+    "cypress": "^10.3.0",
     "cypress-image-diff-js": "^1.19.2",
     "eslint": "^8.18.0",
     "eslint-plugin-cypress": "^2.12.1",
@@ -66,6 +66,7 @@
     "jest-html-reporters": "^3.0.9",
     "live-server": "^1.2.2",
     "msw": "^0.42.1",
+    "node-html-parser": "^5.3.3",
     "postcss": "^8.4.14",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -78,10 +79,11 @@
     "vite-plugin-svgr": "^2.1.1",
     "whatwg-fetch": "^3.6.2"
   },
+  "overrides": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "msw": {
     "workerDirectory": "src/public"
-  },
-  "dependencies": {
-    "vitest": "^0.16.0"
   }
 }

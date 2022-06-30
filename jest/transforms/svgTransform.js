@@ -9,15 +9,15 @@ const { capitalize } = require('../../lib/utils');
 
 module.exports = {
   process(src, filename) {
+    const assetFilename = JSON.stringify(path.basename(filename));
+    const pascalCaseFilename = camelcase(path.parse(filename).name, {
+      pascalCase: true,
+    });
     const elementNode = parse(src).firstChild;
     const attributesAsJSON = JSON.stringify(elementNode.attributes);
     const componentName = `${capitalize(
       elementNode.tagName
     )}${pascalCaseFilename}`;
-    const assetFilename = JSON.stringify(path.basename(filename));
-    const pascalCaseFilename = camelcase(path.parse(filename).name, {
-      pascalCase: true,
-    });
 
     return {
       code: `
