@@ -9,5 +9,5 @@ export default {
   '@scss': path.resolve(srcDir, 'assets/scss'),
   '@components': path.resolve(srcDir, 'components'),
   '@routes': path.resolve(srcDir, 'routes'),
-  'mocks': path.resolve(srcDir, 'mocks'),
+  mocks: path.resolve(srcDir, 'mocks'),
 };

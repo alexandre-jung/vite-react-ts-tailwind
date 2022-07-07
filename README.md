@@ -10,13 +10,17 @@ A project template using:
 - [Vite](https://vitejs.dev/guide/)
 - [Sass](https://sass-lang.com/documentation)
 - [Tailwind](https://tailwindcss.com/docs/installation)
-- [Jest](https://jestjs.io/docs/getting-started) 
+- [Jest](https://jestjs.io/docs/getting-started)
 - [React Testing Library](https://testing-library.com/docs/)
 - [Cypress](https://docs.cypress.io/guides/overview/why-cypress)
+- [MSW](https://mswjs.io/)
 - [Storybook](https://storybook.js.org/docs/react/get-started/introduction)
 - [Docker](https://docs.docker.com/)
 - [gh-pages](https://github.com/gitname/react-gh-pages)
+- [ESLint](https://eslint.org/docs/latest/)
+- [Prettier](https://prettier.io/docs/en/index.html)
 
 ## Resources
 
 - [RWA - The Cypress Real World App](https://github.com/cypress-io/cypress-realworld-app)
+- [Using Prettier and ESLint](https://blog.logrocket.com/using-prettier-eslint-automate-formatting-fixing-javascript/#managing-eslint-rules-avoid-conflict-prettier)

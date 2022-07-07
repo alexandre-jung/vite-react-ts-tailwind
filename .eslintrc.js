@@ -11,6 +11,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:storybook/recommended',
     'plugin:cypress/recommended',
+    'prettier',
   ],
   settings: {
     react: {
@@ -28,7 +29,7 @@ module.exports = {
   plugins: ['react', '@typescript-eslint'],
   rules: {
     indent: ['error', 2],
-    'linebreak-style': ['error', 'windows'],
+    'linebreak-style': ['error', 'unix'],
     quotes: [
       'error',
       'single',
@@ -41,4 +42,5 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     'react/react-in-jsx-scope': 'off',
   },
+  ignorePatterns: ['cypress/e2e/'],
 };

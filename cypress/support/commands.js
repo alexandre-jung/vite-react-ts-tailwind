@@ -24,5 +24,6 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const compareSnapshotCommand = require('cypress-image-diff-js/dist/command');
 compareSnapshotCommand();
