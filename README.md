@@ -13,6 +13,7 @@ A project template using:
 - [Jest](https://jestjs.io/docs/getting-started)
 - [React Testing Library](https://testing-library.com/docs/)
 - [Cypress](https://docs.cypress.io/guides/overview/why-cypress)
+- [cypress-image-diff-js](https://www.npmjs.com/package/cypress-image-diff-js)
 - [MSW](https://mswjs.io/)
 - [Storybook](https://storybook.js.org/docs/react/get-started/introduction)
 - [Docker](https://docs.docker.com/)
