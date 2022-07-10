@@ -1,9 +1,28 @@
-import { useState } from 'react';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import {
+  actionDecrement,
+  actionIncrement,
+  useCounterValue,
+} from '../../store/counter';
 
 export default function Counter() {
-  const [counter, setCounter] = useState(0);
-  const decreaseCounter = () => setCounter((previous) => previous - 1);
-  const increaseCounter = () => setCounter((previous) => previous + 1);
+  const counter = useCounterValue();
+  const dispatch = useDispatch();
+  const increaseCounter = () => {
+    dispatch(actionIncrement());
+  };
+  const decreaseCounter = () => {
+    dispatch(actionDecrement());
+  };
+
+  // Without the cleanup, the counter would be incremented twice.
+  // Please read this section to learn more about that.
+  // https://reactjs.org/docs/strict-mode.html#ensuring-reusable-state
+  useEffect(() => {
+    increaseCounter();
+    return () => decreaseCounter();
+  }, []);
 
   return (
     <div className="z-0">

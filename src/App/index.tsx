@@ -8,6 +8,8 @@ import styles from './styles.module.scss';
 // import Invoices from '@routes/invoices';
 // import { NavLink, Route, Routes } from 'react-router-dom';
 
+import { Provider as CounterProvider } from '../store/counter';
+
 export default function App() {
   // const [data, setData] = useState<{ [key: string]: string }[]>();
   // const [isLoading, setIsLoading] = useState(false);
@@ -37,11 +39,17 @@ export default function App() {
   // );
 
   return (
-    <div className={styles.App}>
-      <ReactLogo width={512} height={512} className="text-sky-600 rotate m-8" />
-      <h1 className={styles.title}>Vite + React template project</h1>
-      <Counter />
-    </div>
+    <CounterProvider>
+      <div className={styles.App}>
+        <ReactLogo
+          width={512}
+          height={512}
+          className="text-sky-600 rotate m-8"
+        />
+        <h1 className={styles.title}>Vite + React template project</h1>
+        <Counter />
+      </div>
+    </CounterProvider>
   );
 
   // <div id="app">
