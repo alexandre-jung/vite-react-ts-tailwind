@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
-const camelcase = require('camelcase');
+const camelCase = require('lodash.camelCase');
 
 // This is a custom Jest transformer turning SCSS modules into proxies
 // that supplies the class name with a prefix.
@@ -8,7 +8,7 @@ const camelcase = require('camelcase');
 
 module.exports = {
   process(src, filename) {
-    const pascalCaseFilename = camelcase(path.parse(filename).name, {
+    const pascalCaseFilename = camelCase(path.parse(filename).name, {
       pascalCase: false,
     });
 

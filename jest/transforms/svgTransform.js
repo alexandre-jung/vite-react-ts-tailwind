@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
-const camelcase = require('camelcase');
-const { parse } = require('node-html-parser');
-const { capitalize } = require('../../lib/utils');
+const camelCase = require('lodash.camelCase');
+const htmlParser = require('node-html-parser');
+const capitalize = require('lodash.capitalize');
 
 // This is a custom Jest transformer turning file imports into filenames.
 // http://facebook.github.io/jest/docs/en/webpack.html
@@ -10,10 +10,10 @@ const { capitalize } = require('../../lib/utils');
 module.exports = {
   process(src, filename) {
     const assetFilename = JSON.stringify(path.basename(filename));
-    const pascalCaseFilename = camelcase(path.parse(filename).name, {
+    const pascalCaseFilename = camelCase(path.parse(filename).name, {
       pascalCase: true,
     });
-    const elementNode = parse(src).firstChild;
+    const elementNode = htmlParser.parse(src).firstChild;
     const attributesAsJSON = JSON.stringify(elementNode.attributes);
     const componentName = `${capitalize(
       elementNode.tagName
