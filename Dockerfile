@@ -11,6 +11,7 @@ ENV PATH /app/node_modules/.bin:$PATH
 COPY package.json ./
 COPY yarn.lock ./
 
+RUN npm install -g npm
 RUN npm install -g yarn
 RUN yarn install
 # RUN npm install --legacy-peer-deps

@@ -23,7 +23,7 @@
     "start": "vite",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook",
-    "storybook:preview": "http-server ./storybook-static",
+    "storybook:preview": "http-server ./storybook-static -p 8080",
     "test": "jest --reporters=default",
     "test:clear": "jest --clearCache",
     "test:coverage": "npm test -- --coverage",

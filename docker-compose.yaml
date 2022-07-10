@@ -2,9 +2,12 @@ services:
   app:
     build: .
     ports:
-      - '3000:3000'
+      - '3000:3000'  # Development mode
+      - '6006:6006'  # Storybook development
+      - '8080:8080'  # Storybook build preview
+      - '8090:8090'  # Build preview
     volumes:
       - .:/app
       - /app/node_modules
-    stdin_open: true # docker run -i
-    tty: true # docker run -t
+    stdin_open: true  # docker run -i
+    tty: true         # docker run -t

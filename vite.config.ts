@@ -21,6 +21,10 @@ const configuration = ({ mode }) => ({
     host: true,
     port: 3000,
   },
+  preview: {
+    host: true,
+    port: 8090,
+  },
   publicDir: 'src/public',
   base: mode == 'production' ? '/vite-react-ts-tailwind/' : '/',
 
