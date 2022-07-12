@@ -2,6 +2,8 @@
 import 'whatwg-fetch';
 import { server } from 'mocks/server';
 
+jest.mock('@/utils');
+
 // Establish API mocking before all tests.
 beforeAll(() => server.listen({ onUnhandledRequest: 'bypass' }));
 

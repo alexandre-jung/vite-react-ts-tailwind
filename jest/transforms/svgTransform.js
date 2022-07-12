@@ -6,6 +6,8 @@ const capitalize = require('lodash.capitalize');
 
 // This is a custom Jest transformer turning file imports into filenames.
 // http://facebook.github.io/jest/docs/en/webpack.html
+// jsdom seems to not implement SVGElement, so we cannot get the element's attributes.
+// Replace node-html-parser with jsdom if this issue is fixed someday.
 
 module.exports = {
   process(src, filename) {

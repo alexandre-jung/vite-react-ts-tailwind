@@ -21,22 +21,29 @@ module.exports = {
     '^.+\\.svg$': '<rootDir>/jest/transforms/svgTransform.js',
     '^.+\\.module.s?css$': '<rootDir>/jest/transforms/scssTransform.js',
   },
+  testPathIgnorePatterns: ['node_modules'],
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
   moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
     '^@assets/(.*)$': '<rootDir>/src/assets/$1',
     '^@components/(.*)$': '<rootDir>/src/components/$1',
     '^@routes/(.*)$': '<rootDir>/src/routes/$1',
     '^mocks/(.*)$': '<rootDir>/src/mocks/$1',
   },
-  // Ignore Cypress' spec files.
-  modulePathIgnorePatterns: ['<rootDir>/cypress/'],
   collectCoverageFrom: [
     './src/**/*.{js,jsx,ts,tsx}',
     '!**/*.stories.{js,jsx,ts,tsx}',
     '!src/main.tsx',
     '!src/vite-env.d.ts',
+    '!src/public/mockServiceWorker.js',
   ],
-  coveragePathIgnorePatterns: ['/node_modules/', '<rootDir>/src/stories/'],
+  coveragePathIgnorePatterns: [
+    '/node_modules/',
+    '<rootDir>/src/stories/',
+    '<rootDir>/src/utils/',
+    '<rootDir>/src/mocks/',
+    '<rootDir>/src/data.js',
+  ],
   reporters: [
     'default',
     // [

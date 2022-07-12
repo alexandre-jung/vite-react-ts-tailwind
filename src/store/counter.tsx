@@ -2,6 +2,7 @@ import { legacy_createStore as createStore, Reducer } from 'redux';
 import { Provider as ReactReduxProvider, useSelector } from 'react-redux';
 import { produce } from 'immer';
 import { ReactNode } from 'react';
+import { isDevMode } from '@/utils';
 
 const initialState = {
   counter: -1,
@@ -68,13 +69,11 @@ const reducer: Reducer<typeof initialState | undefined, Action> = (
     }
   });
 
-const reduxDevtools = import.meta.env.DEV
+const reduxDevtools = isDevMode()
   ? window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
   : undefined;
 
 const store = createStore(reducer, initialState, reduxDevtools);
-
-console.log(import.meta.env.DEV);
 
 export const Provider = ({ children }: { children: ReactNode }) => (
   <ReactReduxProvider store={store}>{children}</ReactReduxProvider>
