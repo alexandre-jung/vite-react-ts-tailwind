@@ -5,7 +5,8 @@
   "homepage": "https://alexandre-jung.github.io/vite-react-ts-tailwind",
   "scripts": {
     "build": "tsc && vite build",
-    "clean": "rm -rf ./coverage ./dist ./html-report ./storybook-static ./node_modules",
+    "clean": "rm -rf ./coverage ./dist ./html-report ./storybook-static",
+    "clean:all": "npm run clean -- ./node_modules",
     "coverage": "live-server --open=./coverage/lcov-report",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --browser chrome --headless",
